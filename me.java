@@ -1,4 +1,4 @@
-// Java program which uses if else ladder
+// Java program which uses if-else if ladder
     public class me {    
         public static void main(String[] args) {    
             int number=15;    
