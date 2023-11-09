@@ -1,35 +1,48 @@
+//This is a java program using inheritance which displays countries found in different continents of the world
 class country {
     void Africa(){
-        System.out.println("RWANDA");
-        System.out.println("EGYPT");
-        System.out.println("SOUTH AFRICA");
+        String newline=System.lineSeparator();
+        System.out.println("These are countries found in Africa continent");
+        System.out.println("RWANDA"+newline+ "EGYPT"+newline+ "SOUTH AFRICA");
         
     }
 }
 class pays extends country{
 public void Asia(){
-    System.out.println("JAPAN");
-    System.out.println("PHILIPPINES");
-    System.out.println("CHINA");
+    String newline=System.lineSeparator();
+    System.out.println("These are countries found in Asia continent:");
+    System.out.println("JAPAN" +newline+ "PHILIPPINES"+newline+ "CHINA");
 }
 }
 class Land extends pays{
     void Europe(){
-        System.out.println("FRANCE");
-        System.out.println("ITALY");
-        System.out.println("SPAIN");
+        String newline=System.lineSeparator();
+        System.out.println("These are countries found in Europe continent:");
+        System.out.println( "FRANCE" + newline + "ITALY" + newline + "SPAIN");
+       
     }
+}
+class paese extends Land{
+    void Oceania(){
+        String newline=System.lineSeparator();
+        System.out.println("These are countries found in Oceania continent:");
+        System.out.println( "SAMOA" + newline +"TUVALU" +newline+ "AUSTRALIA" );
+        
+
+        }
 }
 interface landa{
     void America();
 }
-class C extends Land implements landa{
+class C extends paese implements landa{
    public void America(){
-    System.out.println("USA");
-    System.out.println("MEXICO");
-    System.out.println("COLUMBIA");
+    String newline=System.lineSeparator();
+    System.out.println("These are countries found in America continent:");
+    System.out.println("USA" + newline +"MEXICO" +newline+ "COLUMBIA");
+    
 }
 }
+//Main class
 public class Inherited {
     public static void main(String[] args) {
         C continento= new C();
@@ -37,6 +50,7 @@ public class Inherited {
         continento.Asia();
         continento.Europe();
         continento.America();
+        continento.Oceania();
 
     }
 }
